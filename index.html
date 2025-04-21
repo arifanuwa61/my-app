@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="app-container">
+        <!-- Home Screen (Visible Initially) -->
+        <div id="home-screen">
+            <h1>
+                <span class="cart-icon">🛒</span>Grocery Checklist
+            </h1>
+            <button id="start-button" class="action-button">Start</button>
+            <!-- Placeholder for animation on home screen -->
+            <div id="animation-placeholder-home">
+                <p>Home Animation Area</p>
+            </div>
+        </div>
+
+        <!-- Main App Content (Initially hidden via CSS class) -->
+        <div id="main-app-content">
+            <div class="navigation-buttons">
+                <button id="back-button" class="nav-button back-button" title="Back">&#x2190;</button>
+                <button id="show-list-button" class="nav-button active">Add Your Item</button>
+                <button id="show-calculator-button" class="nav-button">Calculator</button>
+            </div>
+
+            <!-- List Section -->
+            <div id="list-section">
+                <div class="input-area">
+                    <input type="text" id="item-input" placeholder="Add a new item...">
+                    <button id="add-button">Add</button>
+                </div>
+                <ul id="grocery-list"></ul>
+            </div>
+
+            <!-- Calculator Section -->
+            <div id="calculator-section">
+                <div id="calculator-inputs">
+                    <h2>Budget Calculator</h2>
+                    <div class="calc-input">
+                        <label for="budget-input">Your Budget:</label>
+                        <input type="number" id="budget-input" placeholder="Enter total budget">
+                    </div>
+                     <div class="calc-input">
+                        <label for="total-cost">Estimated Cost:</label>
+                        <span id="total-cost-display">RM0.00</span>
+                    </div>
+                    <div class="calc-input">
+                        <label for="remaining-budget">Remaining:</label>
+                        <span id="remaining-budget-display">RM0.00</span>
+                    </div>
+                    <button id="pay-button" class="action-button">Pay Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Receipt Screen (Screen 3) -->
+        <div id="receipt-section">
+             <h2>Receipt</h2>
+             <pre id="receipt-content"></pre>
+             <button id="new-list-button" class="action-button">Start New List</button>
+         </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
